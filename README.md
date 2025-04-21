@@ -2,6 +2,8 @@
 
 This project explores over 500,000 customer reviews from the **Amazon Fine Food Reviews** dataset. Using exploratory data analysis (EDA) and sentiment analysis, we uncover how customers express satisfaction and dissatisfaction beyond numeric ratings. Our goal is to bridge the gap between star ratings and the language of real feedback.
 
+We apply both traditional NLP techniques (TextBlob & VADER) and transformer-based sentiment models (via Hugging Face) to uncover deeper patterns in how customers write reviews.
+
 ---
 
 ## 📦 Dataset
@@ -18,14 +20,18 @@ This project explores over 500,000 customer reviews from the **Amazon Fine Food 
 ## 🔍 Project Objectives
 
 - Perform comprehensive EDA on review patterns
-- Identify trends in review lengths, scores, and content
-- Apply sentiment analysis (TextBlob/VADER)
-- Compare linguistic sentiment scores to review scores
-- Visualize relationships between text, time, and emotion
+- Identify trends in review length, content, and star distribution
+- Apply sentiment analysis using:
+  - ✅ TextBlob (lexicon-based)
+  - ✅ VADER (social media–tuned lexicon-based)
+  - ✅ DistilBERT (transformer-based via Hugging Face)
+- Compare and visualize sentiment score alignment across models
+- Draw actionable insights from text-based customer feedback
 
 ---
 
 ## 📁 Project Structure
+
 ```plaintext
 amazon-fine-food-nlp-eda/
 │
@@ -37,32 +43,39 @@ amazon-fine-food-nlp-eda/
 │
 ├── scripts/
 │   ├── preprocess.py                     # Data cleaning and feature engineering
-│   └── sentiment_analysis.py             # Sentiment scoring using TextBlob/VADER
+│   ├── sentiment_analysis.py             # Traditional sentiment scoring (VADER/TextBlob)
+│   └── hf_sentiment_model.py             # Transformer-based sentiment scoring (DistilBERT)
 │
 ├── visuals/
 │   ├── wordclouds/                       # WordClouds for review texts
-│   ├── histograms/                       # Score distributions, etc.
-│   └── correlation_plots/                # Rating vs sentiment, etc.
+│   ├── histograms/                       # Score distributions, review lengths
+│   └── correlation_plots/                # Score vs sentiment comparisons
 │
 ├── results/
-│   └── sentiment_scores.csv              # Saved sentiment predictions
+│   └── sentiment_scores.csv              # Combined sentiment results
 │
 ├── README.md
 ├── requirements.txt                      # Python dependencies
 └── .gitignore
-```
 
 ---
 
-## 📊 Key Analyses & Visuals
+📊 Key Analyses & Visuals
+⭐ Score distribution bar plots
 
-- **Score distribution bar plots**
-- **Review length histogram by score**
-- **Wordclouds for positive and negative reviews**
-- **Frequent bigrams/trigrams across score levels**
-- **Sentiment polarity histograms**
-- **Correlation plots: score vs sentiment polarity**
-- **Temporal review trends (optional)**
+📏 Review length histograms
+
+☁️ Wordclouds for high vs low star reviews
+
+🧠 Frequent bigrams/trigrams
+
+❤️ Sentiment polarity histograms (TextBlob & VADER)
+
+🤖 Comparison with Hugging Face sentiment model (DistilBERT SST-2)
+
+📉 Correlation plots: star score vs sentiment score
+
+📅 Optional: Time series of review volume over time
 
 ---
 
@@ -90,7 +103,9 @@ jupyter notebook notebooks/01_eda_sentiment_analysis.ipynb
 
 - Pandas, NumPy, Matplotlib, Seaborn
 
-- NLTK, TextBlob, VADER (via nltk.sentiment.vader)
+- NLTK, TextBlob, VADER
+
+- Hugging Face Transformers (distilbert-base-uncased-finetuned-sst-2-english)
 
 - WordCloud, Scikit-learn
 
