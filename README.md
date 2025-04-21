@@ -1,8 +1,10 @@
 # 🍽️ Beyond the Stars: Decoding Customer Voices in Food Reviews
+![Optimizing Heart Valve Replacements](visuals/beyond_the_stars.png)
 
-This project explores over 500,000 customer reviews from the **Amazon Fine Food Reviews** dataset. Using exploratory data analysis (EDA) and sentiment analysis, we uncover how customers express satisfaction and dissatisfaction beyond numeric ratings. Our goal is to bridge the gap between star ratings and the language of real feedback.
 
-We apply both traditional NLP techniques (TextBlob & VADER) and transformer-based sentiment models (via Hugging Face) to uncover deeper patterns in how customers write reviews.
+In this project, over 500,000 customer reviews from the Amazon Fine Food Reviews dataset were explored. Through exploratory data analysis (EDA) and sentiment analysis, customer expressions of satisfaction and dissatisfaction were uncovered, going beyond numeric ratings. The goal was to bridge the gap between star ratings and the language of real feedback.
+
+Both traditional NLP techniques (TextBlob & VADER) and transformer-based sentiment models (via Hugging Face) were applied to uncover deeper patterns in how reviews were written by customers.
 
 ---
 
@@ -57,7 +59,7 @@ amazon-fine-food-nlp-eda/
 ├── README.md
 ├── requirements.txt                      # Python dependencies
 └── .gitignore
-
+```
 ---
 
 📊 Key Analyses & Visuals
