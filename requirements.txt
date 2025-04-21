@@ -2,7 +2,11 @@ pandas
 numpy
 matplotlib
 seaborn
+wordcloud
 textblob
 nltk
 scikit-learn
-wordcloud
+transformers
+torch
+scipy
+jupyter
