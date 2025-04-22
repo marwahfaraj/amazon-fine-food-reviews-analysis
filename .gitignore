@@ -181,3 +181,5 @@ data/Reviews.csv
 
 # Ignore large output file from sentiment analysis
 results/sentiment_scores_full.csv
+
+.DS_Store

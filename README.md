@@ -17,6 +17,9 @@ Both traditional NLP techniques (TextBlob & VADER) and transformer-based sentime
   - `Score`: Star rating (1 to 5)
   - `Summary`, `Time`, `UserId`, `ProductId`
 
+📁 **Note:** The full dataset file `Reviews.csv` has been excluded from this repository due to GitHub’s file size limits.  
+You can download it directly from [Kaggle](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) and place it in the `data/` folder manually.
+
 ---
 
 ## 🔍 Project Objectives
@@ -78,6 +81,11 @@ amazon-fine-food-nlp-eda/
 📉 Correlation plots: star score vs sentiment score
 
 📅 Optional: Time series of review volume over time
+
+
+🕒 **Performance Note:**  
+Running the full Hugging Face sentiment model (`DistilBERT`) on the entire dataset takes approximately **147 minutes**.  
+Once complete, the results will be saved to the `results/sentiment_scores_full.csv` file, which has been excluded from this repository to keep the repo lightweight.
 
 ---
 
