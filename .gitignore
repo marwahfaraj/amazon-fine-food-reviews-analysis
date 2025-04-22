@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore virtual environment folder
+venv/
+
+# Ignore large output file from sentiment analysis
+results/sentiment_scores_full.csv
